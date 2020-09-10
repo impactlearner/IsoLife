@@ -1,8 +1,8 @@
 import React from 'react'
+import { Divider, Image, Card } from 'semantic-ui-react'
 
 import ProductCard from './ProductCard'
 import CategoryFilter from './CategoryFilter';
-
 import PRODUCTS from './data'
 
 // console.log(PRODUCTS)
@@ -18,9 +18,10 @@ const renderProducts = () => {
     return (
         <>
         <h1>ProductList</h1>
-        <CategoryFilter />
-        
+        <Card.Group size ="small">
+       
         {renderProducts()}
+        </Card.Group>
 
         </>
     )

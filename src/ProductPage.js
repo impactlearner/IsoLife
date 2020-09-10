@@ -17,34 +17,40 @@ class ProductPage extends React.Component {
     // TRY to GET the JSX form built out even if it's not controlled
     // After that, control the component; Watch the Controlled Form Lecture to see what's needed in an HTML form
     state = {
-        products: PRODUCTS,
-        // products: [],
-        startIndex: 0
+        // products: PRODUCTS,
+        products: []
+       
     }
     // lifecycle method (componentDidMount)
     // when the component mounts(comes onto the DOM)
     // it will run this code
-    // componentDidMount() {
-    //     // console.log("componentDidMount")
-    //     fetch ("http://localhost:3000/products")
-    //         .then(r => r.json())
-    //         .then(productArray => {
+    componentDidMount() {
+        console.log("componentDidMount")
+        fetch ("http://localhost:4000/products")
+            .then(r => r.json())
+            .then(productArray => {
+                this.setState({
+                    products: productArray
+                })
+            })
+        }
 
-    //             this.setState({
-    //                 products: productArray
-    //             })
-    //         })
-    // }
+        addOneProductToArray = (productInstance) => {
+            console.log(productInstance);
+            console.log(this.state); 
+            let newProductArray = [productInstance, ...this.state.products]
+            this.setState({products: newProductArray})
+        }
 
-    render(){
-        // console.log("render")
-    return (
+    render() {
+        console.log("APP STATE:", this.state);
+        return (
        
-      <div>
-        <button onClick={this.handleFetchClick}>Click 2 Fetch</button>
-        <h1>ProductPage</h1>
+      <div className="ProductPage">
+        {/* <button onClick={this.handleFetchClick}>Click 2 Fetch</button>
+        <h1>ProductPage</h1> */}
         <Search />
-        <ProductForm helperMethod = {() => {}}/> {/* sending arrow function down to ProductForm from ProductPage */}
+        <ProductForm addOneProductToArray = {this.addOneProductToArray}/> {/* sending arrow function down to ProductForm from ProductPage */}
         <ProductList products={this.state.products}/> {/* This is sending state of product array down to ProductList from ProductPage */}
         <CategoryFilter />
         

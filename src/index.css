@@ -1,0 +1,13 @@
+.productcard{
+    background-color: aliceblue !important;
+}
+.header{
+    padding: 60px !important;
+    text-align: center;
+    background-color: aliceblue !important;
+    font-size: 20px;
+}
+.logo{
+    width: 17vw !important;
+    height: 25vh !important;
+}
