@@ -16,27 +16,25 @@ const renderProducts = () => {
 }
 
     return (
-        <>
-        <h1>ProductList</h1>
+        <div>
+        <h1></h1>
         <Card.Group size ="small">
-       
+        {/* deleteProductFromArray={props.deleteProductFromArray} */}
         {renderProducts()}
         </Card.Group>
 
-        </>
+        </div>
     )
+
+// let products = props.products.map((product) => {
+//     return <Card.Group
+//         deleteProductFromArray={props.deleteProductFromArray}
+//         product={product}
+//         key={product.id}
+//          {renderProducts()}
+//     />
+// })
 }
 
-// class ProductList extends Component {
-//     render(){
-//     return (
-//       <div>
-//         <h1>ProductList</h1>
 
-//         <ProductCard />
-        
-//       </div>
-//     )}
-//   }
-  
   export default ProductList;

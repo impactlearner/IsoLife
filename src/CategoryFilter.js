@@ -5,7 +5,7 @@ class CategoryFilter extends React.Component {
 
     return (
         <div>
-            <h1>CategoryFilter</h1>
+            {/* <h1>CategoryFilter</h1> */}
         </div>
 
     )}

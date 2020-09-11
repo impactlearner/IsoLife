@@ -167,6 +167,13 @@
       "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.vDcjHgNOgb8y36Cl_oOSagHaFW%26pid%3DApi&f=1",
       "category": "Office",
       "id": 24
+    },
+    {
+      "title": "product",
+      "price": 19.99,
+      "imageUrl": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1587414272-wfh-bose-1587414258.jpg?crop=1xw:1xh;center,top&resize=768:*",
+      "category": "Office",
+      "id": 25
     }
   ]
 }

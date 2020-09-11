@@ -42,6 +42,13 @@ class ProductPage extends React.Component {
             this.setState({products: newProductArray})
         }
 
+        // deleteProductFromArray = () => key={product.id} product={product}
+        
+        deleteProductFromArray = (idFromChild) => {
+            console.log(idFromChild, "THIS IS IN APP")
+        }
+
+
     render() {
         console.log("APP STATE:", this.state);
         return (
@@ -51,7 +58,10 @@ class ProductPage extends React.Component {
         <h1>ProductPage</h1> */}
         <Search />
         <ProductForm addOneProductToArray = {this.addOneProductToArray}/> {/* sending arrow function down to ProductForm from ProductPage */}
-        <ProductList products={this.state.products}/> {/* This is sending state of product array down to ProductList from ProductPage */}
+        <ProductList
+            products={this.state.products}
+            deleteProductFromArray={this.deleteProductFromArray}
+        /> {/* This is sending state of product array down to ProductList from ProductPage */}
         <CategoryFilter />
         
       </div>
